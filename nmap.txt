@@ -1,0 +1,49 @@
+All You Need To Know About How To Use Nmap To Scan Your Target
+
+By Apkaless
+
+Instagram: Apkaless
+
+====================================================================
+
+================
+|Basic Scanning|
+================
+
+nmap -F -A --open [target] | -F: Fast Scan, -A: enable OS Detection and Version Scanning, --open: only open ports will be displayed
+
+nmap -iL [filename.txt]
+
+nmap -iR [number of random ip]
+
+nmap [target] --exclude [target]
+
+nmap [target] --excludefile [filename.txt]
+
+nmap --top-ports [number of ports ex: 10] [target]
+
+nmap -PN [target] scan the host even if its down
+
+nmap -sP [target] ping scan, only displays up hosts
+
+=======================================================
+
+===================
+|Advanced Scanning|
+===================
+
+nmap -sS [target],  syn stealth scan
+
+nmap -sT [target], TCP Scan
+
+nmap -sU [target], UDP Scan
+
+nmap -sX [target], trying to get response from a system being protected by a firewall
+
+nmap -sA [target]
+
+nmap -sO [target], ip protocol scan
+
+nmap --send-eth [target], sends eth packets
+
+nmap --send-ip [target], sends ip packets
